@@ -1,0 +1,28 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from lightgbm import LGBMClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier, AdaBoostClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_validate, GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from xgboost import XGBClassifier
+from catboost import CatBoostClassifier
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split, cross_validate, GridSearchCV
+import warnings
+warnings.simplefilter(action="ignore")
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 170)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.float_format', lambda x: '%.3f' % x)
+
+import os
+for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
